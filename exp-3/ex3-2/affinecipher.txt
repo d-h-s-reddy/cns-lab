@@ -1,0 +1,19 @@
+Affine cipher:
+The affine cipher is a monoalphabetic substitutional cipher where in each letter is mapped to the particular equivalent numeric number.
+encryption is done by using the simple mathematical function and back into the original letter
+
+The whole process is based on the modulo m(the length of teh alphabet used).in affine the letters of an alphabet of size m are mapped to the integers in the range 0,...m-1.
+
+the key has two numbers a and b
+The value of a should be prime.
+Encryption:
+ It uses the modular arithmetic to transfer the integer plaintext to teh ciphertext.
+The encryption funtcion is: E(x)=(ax+b) mod m
+m=size of the alphabet
+a and b:are keys
+note: a and m should be co primes
+
+Decryption:
+ In decryption we shuld use the opposite of the funtcion to obtain the plaintext from the ciphertext
+The function is:D(x)=a^-1(x-b)mod m
+a^-1 :modular mulitiplicative inverse of a modulo m
