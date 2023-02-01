@@ -10,8 +10,6 @@ public class AffineCipher {
         String cipher=encrypted(str);
         System.out.println("The Encrypted text is:"+cipher);
         System.out.println("The Decrypted text is:"+decrypted(cipher));
-        System.out.println((int)('H'-'A'));
-
     }
     private static String decrypted(String cipher) {
         //first convert the cipher text into lower case
@@ -24,7 +22,7 @@ public class AffineCipher {
         3)repeat it until you reach the value 1
         */
         int inverse_a=findinginverse();
-        System.out.println("The value of the inverse is:"+inverse_a);
+        //System.out.println("The value of the inverse is:"+inverse_a);
         //now do the inverse function 
         for(int i=0;i<cipher.length();i++){
             if(cipher.charAt(i)==' '){
@@ -34,10 +32,10 @@ public class AffineCipher {
             else{
                 //we need to find the value of the x
                 int x=alp.indexOf(cipher.charAt(i));
-                System.out.println("The value of the Encrypted values are:"+x);
+                //System.out.println("The value of the Encrypted values are:"+x);
                 //now calculate the inverse function
                 int cal=((inverse_a*(val(x)))%26);
-                System.out.println("The value of the calculated is:"+cal);
+                //System.out.println("The value of the calculated is:"+cal);
                 decryptedtext+=alp.charAt(cal);
             }
         }
@@ -75,9 +73,9 @@ public class AffineCipher {
             }
             else{
                int x=alp.indexOf(str.charAt(i));//str.charAt(i)-'A';
-               System.out.println("The value of x is:"+x);
+               //System.out.println("The value of x is:"+x);
                int cal=((a*x)+b)%26;
-               System.out.println("The val of expression is:"+cal);
+               //System.out.println("The val of expression is:"+cal);
                encryptedtext+=alp.charAt(cal);//'A'-str.charAt(cal)
             }
         }

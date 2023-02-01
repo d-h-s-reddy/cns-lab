@@ -1,0 +1,16 @@
+playfair cipher was the first pratical subtitution cipher.The scheme was invented in teh yeaar 1854 by charles Wheatstne
+In playfair cipher we encrypt teh pair of alphabets(diagraphs) instead of single alphabet.
+
+ALGO:
+1) First we generate the key square(5 x 5) matrix
+    each 25 alphabets are unique and in case of the alphabet j we usually place the alphabet i to adjust the 26 letters,
+    The initial alphabets in the key square are the unique alphabets of the key in the order in whch they appear followed by the remaining letters of  the alphabet in order
+
+2) After completing the matrix we will make teh plain text into dialphabets taht are basically diagrams and then apply some encryption algorithm to convert that plain text into cipher text.
+* pair cannot be made for the same alphabet
+* if there are any odd digits at the last then we should
+embbed  the letter x and z(bogus letters)
+ eg: instruments
+       in st ru me nt sz
+eg: hello
+       he lx lo
