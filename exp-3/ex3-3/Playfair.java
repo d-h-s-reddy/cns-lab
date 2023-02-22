@@ -1,11 +1,11 @@
 import java.util.*;
-class PlayfairCipher{
+public class Playfair {
     public static void main(String[] args) throws Exception {
-        //Scanner s=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         System.out.println("Enter the plaintext:");
-        String plaintext="hari";
+        String plaintext=sc.nextLine();
         System.out.println("Enter the key:");
-        String key="apple";
+        String key=sc.next();
         //now we should remove the duplicates of the key
         key=removeduplicates(key);
 
@@ -14,8 +14,8 @@ class PlayfairCipher{
     private static String removeduplicates(String key) {
         char c[]=key.toCharArray();
         String newkey="";
-        for(int i=0;i<key.length();i++){
-            for(int j=0;j<key.length();j++){
+        for(int i=0;i<key.length()-1;i++){
+            for(int j=i+1;j<key.length();j++){
                 if(key.charAt(i)==key.charAt(j)){
                     c[j]='1';
                 }
